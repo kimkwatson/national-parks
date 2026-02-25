@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Lexend:wght@100..900&display=swap');
+
+:root {
+    --gray: #969a97;
+    --dark-gray: #0f1a20;
+    --dark-blue: #0a122a;
+    --mint: #e5ece9;
+    
+    --red: #fe5f55;
+    --orange: #ef8a17;
+    --yellow: #fabc3c;
+    --green: #70ae6e;
+    --aqua: #add9f4;
+    --blue: #4ea5d9;
+    --purple: #7776bc;
+    --pink: #df7373;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    margin: 0;
+    padding: .5rem;
+    text-align: center;
+    font-family: "Fredericka the Great", serif;
+    font-size: 1.5rem;
+    background-color: var(--mint);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    align-items: center;
+    font-family: "Lexend", sans-serif;
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+}
+
+nav ul li {
+    text-align: center;
+    padding: 1rem;
+    background-color: whitesmoke;
+    color: var(--dark-gray);
+}
+
+#parks:hover {
+    background-color: var(--red);
+    color: white;
+}
+
+#monuments:hover {
+    background-color: var(--green);
+    color: white;
+}
+
+#recreation:hover {
+    background-color: var(--yellow);
+    color: white;
+}
+
+#shores:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+#trails:hover {
+    background-color: var(--orange);
+    color: white;
+}
+
+#preserves:hover {
+    background-color: var(--aqua);
+}
+
+#memorial:hover {
+    background-color: var(--pink);
+    color: white;
+}
+
+#other:hover {
+    background-color: var(--purple);
+    color: white;
+}
+
+main {
+    flex: 1;
+}
+
+#map {
+    height: 700px;
+    width: 100%;
+    border: 1px solid black;
+    margin-top: .25rem;
+}
+
+footer {
+    margin: .25rem 0;
+    padding: .75rem;
+    background-color: var(--mint);
+    font-family: "Lexend", sans-serif;
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+}
+
+/* Popup Styles */
+
+#popup {
+    background-color: whitesmoke;
+    padding: 1rem;
+}

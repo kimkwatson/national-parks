@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.S. National Parks Map</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>U.S. National Parks Interactive Map</h1>
+    </header>
+    <nav>
+        <ul>
+            <li id="parks">Parks</li>
+            <li id="monuments">Monuments</li>
+            <li id="recreation">Recreation</li>
+            <li id="shores">Water</li>
+            <li id="trails">Trails</li>
+            <li id="preserves">Preserves</li>
+            <li id="memorial">Memorials</li>
+            <li id="other">Other</li>
+        </ul>
+    </nav>
+    <main>
+        <div id="map"></div>
+    </main>
+    <footer>&copy 2026 | Kim Watson</footer>
+    <script type="module" src="js/main.js"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDxe-VGHrC8UX8Xh5k89vrB7D5nZW5cuo&callback=initMap&libraries=marker"
+    async
+    defer
+></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+  "types": {
+    "Parks": { "background": "#fe5f55", "accent": "#ff9a93" },
+    "Monuments": { "background": "#70ae6e", "accent": "#a6d3a4" },
+    "Recreation": { "background": "#fabc3c", "accent": "#ffe29a" },
+    "Water": { "background": "#4ea5d9", "accent": "#8fc9ea" },
+    "Trails": { "background": "#ef8a17", "accent": "#f4b46a" },
+    "Preserves": { "background": "#add9f4", "accent": "#d8ecfa" },
+    "Memorials": { "background": "#df7373", "accent": "#f0aaaa" },
+    "Other": { "background": "#7776bc", "accent": "#b1b0e0" }
+  },
+
+  "parks": [
+    { "id": "acad", "name": "Acadia National Park", "state": "ME", "lat": 44.35, "lng": -68.217, "type": "Parks" },
+    { "id": "arch", "name": "Arches National Park", "state": "UT", "lat": 38.733082, "lng": -109.592514, "type": "Parks" },
+    { "id": "badl", "name": "Badlands National Park", "state": "SD", "lat": 43.75, "lng": -102.5, "type": "Parks" },
+    { "id": "bibe", "name": "Big Bend National Park", "state": "TX", "lat": 29.249902, "lng": -103.250164, "type": "Parks" },
+    { "id": "brca", "name": "Bryce Canyon National Park", "state": "UT", "lat": 37.593048, "lng": -112.187332, "type": "Parks" },
+    { "id": "cany", "name": "Canyonlands National Park", "state": "UT", "lat": 38.3269, "lng": -109.8783, "type": "Parks" },
+    { "id": "cave", "name": "Carlsbad Caverns National Park", "state": "NM", "lat": 32.174212, "lng": -104.445855, "type": "Parks" },
+    { "id": "crla", "name": "Crater Lake National Park", "state": "OR", "lat": 42.944611, "lng": -122.109245, "type": "Parks" },
+    { "id": "deva", "name": "Death Valley National Park", "state": "CA/NV", "lat": 36.505389, "lng": -117.079408, "type": "Parks" },
+    { "id": "ever", "name": "Everglades National Park", "state": "FL", "lat": 25.395269, "lng": -80.583156, "type": "Parks" },
+    { "id": "glac", "name": "Glacier National Park", "state": "MT", "lat": 48.759613, "lng": -113.787023, "type": "Parks" },
+    { "id": "grca", "name": "Grand Canyon National Park", "state": "AZ", "lat": 36.266033, "lng": -112.363808, "type": "Parks" },
+    { "id": "grte", "name": "Grand Teton National Park", "state": "WY", "lat": 43.790802, "lng": -110.684944, "type": "Parks" },
+    { "id": "grsm", "name": "Great Smoky Mountains National Park", "state": "TN/NC", "lat": 35.611763, "lng": -83.489548, "type": "Parks" },
+    { "id": "jotr", "name": "Joshua Tree National Park", "state": "CA", "lat": 33.881866, "lng": -115.90065, "type": "Parks" },
+    { "id": "mora", "name": "Mount Rainier National Park", "state": "WA", "lat": 46.879967, "lng": -121.726906, "type": "Parks" },
+    { "id": "olym", "name": "Olympic National Park", "state": "WA", "lat": 47.802109, "lng": -123.604355, "type": "Parks" },
+    { "id": "romo", "name": "Rocky Mountain National Park", "state": "CO", "lat": 40.343182, "lng": -105.688103, "type": "Parks" },
+    { "id": "yell", "name": "Yellowstone National Park", "state": "WY/MT/ID", "lat": 44.446037, "lng": -110.587349, "type": "Parks" },
+    { "id": "yose", "name": "Yosemite National Park", "state": "CA", "lat": 37.865101, "lng": -119.53833, "type": "Parks" },
+
+    { "id": "devi", "name": "Devils Tower National Monument", "state": "WY", "lat": 44.5902, "lng": -104.7157, "type": "Monuments" },
+    { "id": "stat", "name": "Statue of Liberty National Monument", "state": "NY", "lat": 40.6892, "lng": -74.0445, "type": "Monuments" },
+    { "id": "cabr", "name": "Cabrillo National Monument", "state": "CA", "lat": 32.6722, "lng": -117.2425, "type": "Monuments" },
+    { "id": "band", "name": "Bandelier National Monument", "state": "NM", "lat": 35.7781, "lng": -106.3311, "type": "Monuments" },
+    { "id": "chir", "name": "Chiricahua National Monument", "state": "AZ", "lat": 32.0046, "lng": -109.356, "type": "Monuments" },
+
+    { "id": "glen", "name": "Glen Canyon National Recreation Area", "state": "AZ/UT", "lat": 36.9389, "lng": -111.4846, "type": "Recreation" },
+    { "id": "lake", "name": "Lake Mead National Recreation Area", "state": "NV/AZ", "lat": 36.0156, "lng": -114.7377, "type": "Recreation" },
+    { "id": "gate", "name": "Golden Gate National Recreation Area", "state": "CA", "lat": 37.8199, "lng": -122.4783, "type": "Recreation" },
+    { "id": "ross", "name": "Ross Lake National Recreation Area", "state": "WA", "lat": 48.7164, "lng": -121.144, "type": "Recreation" },
+    { "id": "chic", "name": "Chickasaw National Recreation Area", "state": "OK", "lat": 34.4603, "lng": -97.0075, "type": "Recreation" },
+
+    { "id": "isro", "name": "Isle Royale National Park", "state": "MI", "lat": 48.1, "lng": -88.55, "type": "Water" },
+    { "id": "bisc", "name": "Biscayne National Park", "state": "FL", "lat": 25.4824, "lng": -80.21, "type": "Water" },
+    { "id": "chan", "name": "Channel Islands National Park", "state": "CA", "lat": 34.002, "lng": -119.7785, "type": "Water" },
+    { "id": "dryt", "name": "Dry Tortugas National Park", "state": "FL", "lat": 24.6285, "lng": -82.8732, "type": "Water" },
+    { "id": "cape", "name": "Cape Hatteras National Seashore", "state": "NC", "lat": 35.25, "lng": -75.528, "type": "Water" },
+
+    { "id": "appa", "name": "Appalachian National Scenic Trail", "state": "GA–ME", "lat": 40.366, "lng": -78.91, "type": "Trails" },
+    { "id": "pct", "name": "Pacific Crest National Scenic Trail", "state": "CA–WA", "lat": 36.7783, "lng": -119.4179, "type": "Trails" },
+    { "id": "cdt", "name": "Continental Divide National Scenic Trail", "state": "NM–MT", "lat": 39.113, "lng": -105.3589, "type": "Trails" },
+    { "id": "natc", "name": "Natchez Trace National Scenic Trail", "state": "TN/MS/AL", "lat": 34.344, "lng": -88.729, "type": "Trails" },
+    { "id": "elca", "name": "El Camino Real de Tierra Adentro Trail", "state": "TX/NM", "lat": 32.3199, "lng": -106.7637, "type": "Trails" },
+
+    { "id": "biga", "name": "Big Cypress National Preserve", "state": "FL", "lat": 25.8551, "lng": -81.081, "type": "Preserves" },
+    { "id": "noat", "name": "Noatak National Preserve", "state": "AK", "lat": 67.558, "lng": -159.28, "type": "Preserves" },
+    { "id": "yuch", "name": "Yukon–Charley Rivers National Preserve", "state": "AK", "lat": 65.083, "lng": -142.43, "type": "Preserves" },
+    { "id": "aniak", "name": "Aniakchak National Preserve", "state": "AK", "lat": 56.854, "lng": -158.21, "type": "Preserves" },
+    { "id": "wrst", "name": "Wrangell–St. Elias National Preserve", "state": "AK", "lat": 61.7104, "lng": -142.9857, "type": "Preserves" },
+
+    { "id": "linc", "name": "Lincoln Memorial", "state": "DC", "lat": 38.8893, "lng": -77.0502, "type": "Memorials" },
+    { "id": "jefm", "name": "Jefferson Memorial", "state": "DC", "lat": 38.8814, "lng": -77.0365, "type": "Memorials" },
+    { "id": "wwii", "name": "World War II Memorial", "state": "DC", "lat": 38.8894, "lng": -77.0405, "type": "Memorials" },
+    { "id": "viet", "name": "Vietnam Veterans Memorial", "state": "DC", "lat": 38.8913, "lng": -77.0477, "type": "Memorials" },
+    { "id": "mlkm", "name": "Martin Luther King Jr. Memorial", "state": "DC", "lat": 38.8862, "lng": -77.0445, "type": "Memorials" },
+
+    { "id": "alca", "name": "Alcatraz Island", "state": "CA", "lat": 37.8267, "lng": -122.423, "type": "Other" },
+    { "id": "manz", "name": "Manzanar National Historic Site", "state": "CA", "lat": 36.7269, "lng": -118.1547, "type": "Other" },
+    { "id": "tule", "name": "Tule Lake National Monument", "state": "CA", "lat": 41.8872, "lng": -121.3742, "type": "Other" },
+    { "id": "minu", "name": "Minuteman Missile National Historic Site", "state": "SD", "lat": 43.8956, "lng": -102.3332, "type": "Other" },
+    { "id": "pull", "name": "Pullman National Historical Park", "state": "IL", "lat": 41.6944, "lng": -87.6089, "type": "Other" }
+  ]
+}
+
