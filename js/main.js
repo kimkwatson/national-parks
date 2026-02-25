@@ -13,6 +13,7 @@ window.initMap = async () => {
 
 const hamburger = document.querySelector('#hamButton');
 const navigation = document.querySelector('#animated');
+const menuItems = document.querySelectorAll('#animated ul.menu li');
 
 hamburger.addEventListener('click', () => {
     navigation.classList.toggle('open');
@@ -21,7 +22,7 @@ hamburger.addEventListener('click', () => {
 
 // Menu Selection
 
-const menuItems = document.querySelectorAll('ul.menu li');
+
 
 menuItems.forEach(item => {
   item.addEventListener('click', () => {
@@ -30,5 +31,9 @@ menuItems.forEach(item => {
 
     // add active to the selected menu item
     item.classList.add('active');
+
+    // close hamburger menu after choosing
+    navigation.classList.remove('open');
+    hamburger.classList.remove('open');
   });
 });

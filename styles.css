@@ -178,7 +178,7 @@ footer {
 
     #animated {
         display: grid;
-        grid-template-rows: 0fr;
+        grid-template-rows: 1fr;
         transition: grid-template-rows .5s ease-out;
     }
 
@@ -191,6 +191,19 @@ footer {
     }
 
     #animated ul.menu {
+        display: block;
+    }
+
+    #animated ul.menu li {
+        display: none;
+    }
+
+    #animated ul.menu li.active {
+        display: block;
+        text-align: left;
+    }
+
+    #animated.open ul.menu li {
         display: block;
     }
 
