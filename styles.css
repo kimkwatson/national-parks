@@ -234,18 +234,24 @@ footer {
         grid-template-rows: 1fr;
     }
 
+    main {
+        flex: 0 !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
     #map {
-    height: 300px;
-    width: 100%;
-    border: 1px solid black;
-    margin-top: .25rem;
+        height: 60vh;
+        min-height: 0 !important;
     }
 
     /* Mobile Popup Styles */
 
     #popup {
         width: 250px;
-        max-width: 90vw;
+        max-width: 100vw;
         box-sizing: border-box;
         padding: 0;
         background-color: white;
