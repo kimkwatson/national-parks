@@ -8,17 +8,20 @@
 </head>
 <body>
     <header>
-        <h1>U.S. National Parks Interactive Map</h1>
+        <h1>U.S. National Parks Interactive Map</h1> 
+        <div>
+            <button id="hamButton"></button>
+        </div>
     </header>
-    <nav>
-        <ul>
-            <li id="parks">Parks</li>
-            <li id="monuments">Monuments</li>
+    <nav id="animated">
+        <ul class="menu">
+            <li id="parks">Park</li>
+            <li id="monuments">Monument</li>
             <li id="recreation">Recreation</li>
             <li id="shores">Water</li>
-            <li id="trails">Trails</li>
-            <li id="preserves">Preserves</li>
-            <li id="memorial">Memorials</li>
+            <li id="historic">Historic</li>
+            <li id="preserves">Preserve</li>
+            <li id="memorial">Memorial</li>
             <li id="other">Other</li>
         </ul>
     </nav>
@@ -29,7 +32,6 @@
     <script type="module" src="js/main.js"></script>
     <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDxe-VGHrC8UX8Xh5k89vrB7D5nZW5cuo&callback=initMap&libraries=marker"
-    async
     defer
 ></script>
 </body>
