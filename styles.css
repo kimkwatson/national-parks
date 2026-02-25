@@ -110,8 +110,9 @@ main {
 }
 
 #map {
-    height: 700px;
+    height: 100%;
     width: 100%;
+    min-height: 60vh;
     border: 1px solid black;
     margin-top: .25rem;
 }
