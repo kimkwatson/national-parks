@@ -290,11 +290,13 @@ footer {
         padding: 0;
         background-color: white;
         color: var(--dark-gray);
+        box-shadow: none;
     }
     #popup-image {
         width: 250px;
         max-width: 100%;
         height: auto;
+        box-shadow: none;
     }
 }
 
