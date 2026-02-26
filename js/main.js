@@ -1,12 +1,22 @@
-import { initMap as buildMap } from "./map.js";
+import { initMap as buildMap, renderMarkers } from "./map.js";
+
+let types = {};
+
+async function loadTypes() {
+  const response = await fetch("./data/types.json");
+  const json = await response.json();
+  types = json.types;
+}
 
 window.initMap = async () => {
+    // get types from json
+    await loadTypes();
+
     const response = await fetch("https://developer.nps.gov/api/v1/parks?limit=500&api_key=amsIZUIObPexCdxaNPdbpUOq0lKUxhjwD91MOVj8");
     const json = await response.json();
     const parks = json.data;
-    console.log("NPS returned:", json.data.length, "of total:", json.total, "limit:", json.limit, "start:", json.start);
 
-    buildMap(parks);
+    buildMap(parks, types);
 };
 
 // Hamburger Menu
@@ -22,8 +32,6 @@ hamburger.addEventListener('click', () => {
 
 // Menu Selection
 
-
-
 menuItems.forEach(item => {
   item.addEventListener('click', () => {
     // remove active from all
@@ -35,5 +43,7 @@ menuItems.forEach(item => {
     // close hamburger menu after choosing
     navigation.classList.remove('open');
     hamburger.classList.remove('open');
+
+    renderMarkers();
   });
 });

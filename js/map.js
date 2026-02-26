@@ -1,9 +1,16 @@
+let map;
+let markers = [];
+let allParks = [];
+let typesConfig = [];
+
 export async function initMap(parks, types) {
+    allParks = parks;
+    typesConfig = types;
+    
     const isMobile = window.innerWidth <= 860;
     const zoomLevel = isMobile ? 3.2 : 5;
-    const pinScale = isMobile ? .4 : 1;
     
-    const map = new google.maps.Map(document.getElementById("map"), {
+    map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 36.8293, lng: -95.5795 },
         zoom: zoomLevel,
         scrollwheel: false,
@@ -11,39 +18,47 @@ export async function initMap(parks, types) {
         mapId: "59465a2252ededec98830f0d",
     });
 
-    const { AdvancedMarkerElement, PinElement } =
     await google.maps.importLibrary("marker");
 
-    types = {
-    "National Park": { "background": "#fe5f55", "accent": "#ff9a93" },
-    "National Monument": { "background": "#70ae6e", "accent": "#a6d3a4" },
-    "National Recreation Area": { "background": "#fabc3c", "accent": "#ffe29a" },
-    "National Seashore": { "background": "#4ea5d9", "accent": "#8fc9ea" },
-    "National Lakeshore": { "background": "#4ea5d9", "accent": "#8fc9ea" },
-    "National Historic Site": { "background": "#ef8a17", "accent": "#f4b46a" },
-    "National Preserve": { "background": "#add9f4", "accent": "#d8ecfa" },
-    "National Memorial": { "background": "#df7373", "accent": "#f0aaaa" },
-    default: { "background": "#7776bc", "accent": "#b1b0e0" },
-    }
+    renderMarkers();
+}
 
-    parks.forEach(park => {
+export function renderMarkers() {
+    // clear old markers
+    markers.forEach(marker => (marker.map = null));
+    markers = [];
 
-        const infowindow = new google.maps.InfoWindow({
-            content: buildPopup(park),
-            ariaLabel: park.fullName,
-        })
+    // determine type/designation
+    const selectedType = document.querySelector('#animated li.active')?.dataset.designation ?? "all";
+
+    const isMobile = window.innerWidth <= 860;
+    const pinScale = isMobile ? .4 : 1;
+
+    const { AdvancedMarkerElement, PinElement } = google.maps.marker;
+
+    allParks.forEach(park => {
+
+        // filtering
+        if (selectedType === "default" && typesConfig[park.designation]) return;
+
+        if (selectedType !== "all" &&
+            selectedType !== "default" &&
+            park.designation !== selectedType) return;
+
+        // get position in lat/long
         const lat = Number(park.latitude);
         const lng = Number(park.longitude);
         const position = { lat: lat, lng: lng };
-        const marker = new AdvancedMarkerElement({
-        map,
-        position,
-        title: park.fullName,
-        });
 
-        // create pin element
-        const typeKey = park.designation ?? "default";
-        const style = types[typeKey] ?? types.default;
+        // get type/designation
+        const style = typesConfig[park.designation] ?? typesConfig.default;
+        
+        // create marker
+        const marker = new AdvancedMarkerElement({
+            map,
+            position,
+            title: park.fullName,
+            });
 
         const pin = new PinElement({
             scale: pinScale,
@@ -51,15 +66,23 @@ export async function initMap(parks, types) {
             borderColor: style.accent,
             glyphColor: style.accent,
         });
+
         marker.content = pin;
+
+        const infowindow = new google.maps.InfoWindow({
+            content: buildPopup(park),
+            ariaLabel: park.fullName,
+        })
     
         marker.addListener('click', () => {
-                infowindow.open({
-                    anchor: marker,
-                    map,
-                })
-                infowindow.focus()
+            infowindow.open({
+                anchor: marker,
+                map,
+            })
+            infowindow.focus()
         });
+        
+        markers.push(marker);
     });
 }
 

@@ -1,0 +1,13 @@
+{
+  "types": {
+    "National Park": { "background": "#fe5f55", "accent": "#ff9a93" },
+    "National Monument": { "background": "#70ae6e", "accent": "#a6d3a4" },
+    "National Recreation Area": { "background": "#fabc3c", "accent": "#ffe29a" },
+    "National Seashore": { "background": "#4ea5d9", "accent": "#8fc9ea" },
+    "National Lakeshore": { "background": "#4ea5d9", "accent": "#8fc9ea" },
+    "National Historic Site": { "background": "#ef8a17", "accent": "#f4b46a" },
+    "National Preserve": { "background": "#add9f4", "accent": "#d8ecfa" },
+    "National Memorial": { "background": "#df7373", "accent": "#f0aaaa" },
+    "default": { "background": "#7776bc", "accent": "#b1b0e0" }
+    }
+}

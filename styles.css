@@ -58,7 +58,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     list-style-type: none;
     align-items: center;
     font-family: "Lexend", sans-serif;
@@ -70,6 +70,11 @@ nav ul li {
     background-color: var(--gray);
     color: white;
     cursor: pointer;
+}
+
+#all:hover, #all.active {
+    background-color: whitesmoke;
+    color: black;
 }
 
 #parks:hover, #parks.active {
@@ -138,13 +143,15 @@ footer {
     margin: 0 auto;
     text-align: left;
     font-family: "Playfair Display", serif;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gray);
 }
 
 #popup-image {
-    border: 2px solid var(--dark-gray);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 420px;
     max-width: 100%;
-    margin-top: 8px;
+    margin-top: 12px;
     display: block;
 }
 
@@ -153,10 +160,13 @@ footer {
     color: white;
     padding: 1rem;
     font-family: "Lexend", sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 #popup-states{
     font-family: "Lexend", sans-serif;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gray);
 }
 
 #popup-link {
